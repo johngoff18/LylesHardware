@@ -1,0 +1,9 @@
+
+<blockquote class="blockquote">
+  <p class="mb-0"><small><%= comment.body %></small></p>
+  <footer class="blockquote-footer"><%= comment.commenter %></footer>
+
+</blockquote>
+<p><%= link_to 'Destroy Comment', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } , class: "btn btn-outline-danger btn-sm" %></p>
