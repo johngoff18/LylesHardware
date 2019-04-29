@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Deals <%= link_to new_deal_path, class:"btn btn-success btn-sm" do %>
+	<i class="fas fa-plus"></i><% end %></h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+<th>Image</th>
+      <th>Name</th>
+      <th>Sale price</th>
+      <th>Purchase</th>
+      
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deals.each do |deal| %>
+      <tr>
+<td><%= deal.image_url.html_safe %></td>
+        <td><%= deal.name %></td>
+        <td>$<%= deal.sale_price %></td>
+        <td><%= link_to "Buy Now", deal.purchase_url, class:"btn btn-success" %></td>
+        
+        <td><%= link_to 'Show', deal %></td>
+        <td><%= link_to 'Edit', edit_deal_path(deal) %></td>
+        <td><%= link_to 'Destroy', deal, method: :delete, data: { confirm: 'Are you sure?' } , class:"badge badge-danger"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

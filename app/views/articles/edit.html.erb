@@ -1,19 +1,21 @@
-<h1>Edit article</h1>
+<h2>Edit Article</h2>
  
 <%= form_with(model: @article, local: true) do |form| %>
  
   <% if @article.errors.any? %>
+<div class="alert alert-danger" role="alert">
     <div id="error_explanation">
-      <h2>
+      <h4>
         <%= pluralize(@article.errors.count, "error") %> prohibited
         this article from being saved:
-      </h2>
+      </h4>
       <ul>
         <% @article.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
     </div>
+</div>
   <% end %>
  
   <p class="form-group">

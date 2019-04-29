@@ -1,0 +1,29 @@
+<%= form_with(model: image_post, local: true) do |form| %>
+  <% if image_post.errors.any? %>
+<div class="alert alert-warning" role="alert">
+    <div id="error_explanation">
+      <h2><%= pluralize(image_post.errors.count, "error") %> prohibited this image_post from being saved:</h2>
+
+      <ul>
+      <% image_post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+</div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :caption %>
+    <%= form.text_field :caption , class: "form-control"%>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_area :link , class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:"btn btn-primary btn-sm" %>
+  </div>
+<% end %>

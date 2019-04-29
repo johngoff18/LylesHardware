@@ -66,9 +66,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 ################### USER GEMS START ########################
 
-# Paperclip for image uploads
+gem 'cloudinary'
 
-
+gem 'pusher'
 
 
 

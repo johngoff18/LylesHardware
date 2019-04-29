@@ -1,0 +1,21 @@
+<table  class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Purchase</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deals.each do |deal| %>
+      <tr>
+        <td><%= deal.image_url.html_safe %></td>
+        <td><%= deal.name %></td>
+        <td><%= deal.sale_price %></td>
+        <td><%= link_to "Buy Now", deal.purchase_url, class:"btn btn-success btn-sm" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

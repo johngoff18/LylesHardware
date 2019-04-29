@@ -1,4 +1,4 @@
-<h1 class="pull-left">Listing articles <span class="badge badge-primary"><%= @articles.count %></span></h1>
+<h1 class="pull-left">Listing articles <span class="badge badge-success"><%= @articles.count %></span></h1>
 
 <table class="table table-bordered table-dark">
   <tr>
@@ -17,9 +17,9 @@
       <td><%= link_to 'Edit', edit_article_path(article) %></td>
       <td><%= link_to 'Destroy', article_path(article),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+              data: { confirm: 'Are you sure?' }, class: "badge badge-danger" %></td>
     </tr>
   <% end %>
 </table>
 
-<%= link_to 'New Article', new_article_path %>
+<%= link_to 'New Article', new_article_path, class: "btn btn-primary btn-sm" %>

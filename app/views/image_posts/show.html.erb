@@ -1,0 +1,21 @@
+<div class="alert alert-success" role="alert">
+ <p id="notice"><%= notice %></p>
+</div>
+
+
+<p>
+  <strong>Caption:</strong>
+  <%= @image_post.caption %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @image_post.link %>
+</p>
+
+<p>
+ <img src="<%= @image_post.link %>" alt="<%= @image_post.caption %>" height="25%" width="25%"> 
+</p>
+
+<%= link_to 'Edit', edit_image_post_path(@image_post) %> |
+<%= link_to 'Back', image_posts_path %>

@@ -1,0 +1,15 @@
+<h1>Gallery <%= link_to new_image_post_path, class:"btn btn-success btn-sm" do %><i class="fas fa-plus"></i><% end %></h1>
+
+<div class="card-columns">
+<% @image_posts.each do |image_post| %>
+<div class="card">
+    <img src="<%= image_post.link %>" class="card-img-top" alt="<%= image_post.caption %>">
+    <div class="card-body">
+      <h5 class="card-title"><%= image_post.caption %></h5>
+      <p class="card-text"><%= image_post.caption %></p>
+    </div>
+  </div>
+<% end %>
+
+
+
