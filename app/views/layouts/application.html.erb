@@ -4,6 +4,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Lyle's Hardware</title>
+	
+	<meta property="og:url"           content="<%= request.original_url %>" />
+	  <meta property="og:type"          content="website" />
+	  <meta property="og:title"         content="Lyle's Hardware" />
+	  <meta property="og:description"   content="Website for everything computer hardware related" />
 
 <%= favicon_link_tag asset_path('icon.png') %>
     <%= csrf_meta_tags %>
@@ -13,13 +18,32 @@
 	
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	
+	<script>(function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0];
+	    if (d.getElementById(id)) return;
+	    js = d.createElement(s); js.id = id;
+	    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+	    fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));</script>
 <style>
 
 </style>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8783854618839636",
+    enable_page_level_ads: true
+  });
+</script>
   </head>
 
   <body>
+
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -35,7 +59,7 @@
     <nav class="my-2 my-md-0 mr-md-3">
 <%= link_to "Reviews", root_path, class: "p-2 text-dark" %>
 <%= link_to "Gallery", gallery_index_path, class: "p-2 text-dark" %>
-<%= link_to "Deals", deals_path, class: "p-2 text-dark" %>
+<%= link_to "Deals", welcome_deals_path, class: "p-2 text-dark" %>
     </nav>
     <a class="btn btn-outline-primary" href="#">Store <span class="badge badge-light">0</span></a>
   </div>
@@ -46,9 +70,13 @@
 <div>
   </div>
   <div class="row">
-    <div class="col-auto">
+    <div class="col-8">
       <%= yield %>
     </div>
+	<div class="col">
+		<%= render "welcome/google_ad"%>
+		<%= render "welcome/twitter_feed"%>
+	</div>
   </div>
 </div>
 <footer class="pt-4 my-md-5 pt-md-5 border-top">
@@ -64,45 +92,48 @@
           <h5>Features</h5>
           <ul class="list-unstyled text-small">
 
-
-
-
-
-
             <li><%= link_to "Reviews", root_path, class: "text-muted" %></li>
             <li><%= link_to "Gallery", gallery_index_path, class: "text-muted" %></li>
-            <li><%= link_to "Deals", deals_path, class: "text-muted" %></li>
+            <li><%= link_to "Deals", welcome_deals_path, class: "text-muted" %></li>
 
           </ul>
         </div>
         <div class="col-6 col-md">
           <h5>Resources</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Downloads</a></li>
+            <li><%= link_to "Downloads", welcome_downloads_path, class: "text-muted" %></li>
             <li><a class="text-muted" href="#">How To Videos</a></li>
-            <li><a class="text-muted" href="#">PC Builder</a></li>
-            <li><a class="text-muted" href="#">Component Stores</a></li>
+            <li><a class="text-muted" href="https://pcpartpicker.com">PC Parts Picker</a></li>
           </ul>
         </div>
         <div class="col-6 col-md">
           <h5>About</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Team</a></li>
-            <li><a class="text-muted" href="#">Locations</a></li>
-            <li><a class="text-muted" href="#">Privacy</a></li>
-            <li><a class="text-muted" href="#">Terms</a></li>
-<li><%= link_to 'Admin', controller: 'articles' %></li>
+            <li><%= link_to "Team", welcome_team_path, class: "text-muted" %></li>
+            <li><%= link_to "About", welcome_about_path, class: "text-muted" %></li>
+			<li><%= link_to "Contact Us", welcome_contact_path, class: "text-muted" %></li>
+            <li><%= link_to "Privacy", welcome_privacy_path, class: "text-muted" %></li>
+            <li><%= link_to "Terms", welcome_terms_path, class: "text-muted" %></li>
+			<li><%= link_to 'Admin', controller: 'articles' %></li>
           </ul>
         </div>
       </div>
 </div>
     </footer>
+	
+	
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122671023-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  gtag('config', 'UA-122671023-2');
+</script>
+
+
+	  
+	  <script id="dsq-count-scr" src="//lyle-goff.disqus.com/count.js" async></script>
   </body>
 </html>

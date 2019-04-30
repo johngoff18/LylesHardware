@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Downloads <%= link_to new_download_path, class:"btn btn-success btn-sm" do %>
+	<i class="fas fa-plus"></i><% end %></h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Link</th>
+      <th scope="col" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @downloads.each do |download| %>
+      <tr>
+        <td><%= download.name %></td>
+        <td><%= link_to "Download Now",  download.link , class:"btn btn-info btn-sm"%></td>
+        <td><%= link_to 'Show', download %></td>
+        <td><%= link_to 'Edit', edit_download_path(download) %></td>
+        <td><%= link_to 'Destroy', download, method: :delete, data: { confirm: 'Are you sure?' } , class:"badge badge-danger"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

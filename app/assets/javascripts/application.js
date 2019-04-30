@@ -14,3 +14,11 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+	
+
+		// Particles.init({
+// 			selector: '.background',
+// 		  color: '#e74c3c',
+// 		  connectParticles: true
+// 		});
+

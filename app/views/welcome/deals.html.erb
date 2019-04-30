@@ -1,0 +1,24 @@
+<h1>Deals</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+<th>Image</th>
+      <th>Name</th>
+      <th>Sale price</th>
+      <th>Purchase</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deals.each do |deal| %>
+      <tr>
+<td><%= deal.image_url.html_safe %></td>
+        <td><%= deal.name %></td>
+        <td>$<%= deal.sale_price %></td>
+        <td><%= link_to "Buy Now", deal.purchase_url, class:"btn btn-success" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

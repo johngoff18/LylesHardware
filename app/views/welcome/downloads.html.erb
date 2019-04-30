@@ -1,0 +1,13 @@
+<h1>Downloads</h1>
+
+<table class="table table-bordered">
+
+  <tbody>
+    <% @downloads.each do |download| %>
+      <tr>
+        <td><%= download.name %></td>
+        <td><%= link_to "Download Now",  download.link , class:"btn btn-info btn-sm"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

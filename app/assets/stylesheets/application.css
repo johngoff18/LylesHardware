@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+html {
+	background-color:#ecf0f1;
+}

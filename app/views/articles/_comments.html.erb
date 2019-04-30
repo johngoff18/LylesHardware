@@ -1,0 +1,7 @@
+<h6>Comments <span class="badge badge-primary"><%= @article.comments.count %></span></h6>
+
+    <%= render @article.comments %>
+
+ 
+<h6>Add a comment:</h6>
+<%= render 'comments/form' %>
