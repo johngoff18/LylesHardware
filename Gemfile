@@ -65,15 +65,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 ################### USER GEMS START ########################
-
-gem 'cloudinary'
-
-gem 'pusher'
-
-#gem 'pg'
-
-
-
-
-
-################### USER GEMS END ########################
+################### USER GEMS END   ########################
