@@ -29,6 +29,9 @@ html {
 	background-color:#ecf0f1;
 }
 
+.center {
+	margin: auto 0;
+}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */

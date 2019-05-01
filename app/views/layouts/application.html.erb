@@ -69,13 +69,18 @@
 <p class="text-muted text-center"><small>Lyle's Hardware reviews products.  When you click our links to buy products we earn a percentage to fund <%= link_to "this site", root_path %>.</small></p>
 <div>
   </div>
+  
   <div class="row">
     <div class="col-8">
+		<%= render "welcome/amazon_banner"%>
       <%= yield %>
+	  
     </div>
-	<div class="col">
-		<%= render "welcome/google_ad"%>
+	<div class="col-auto">
+		
 		<%= render "welcome/twitter_feed"%>
+		<%= render "welcome/amazon_music"%>
+		
 	</div>
   </div>
 </div>
