@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require owl.carousel
 //= require_tree .
 	
 
@@ -21,4 +22,6 @@
 // 		  color: '#e74c3c',
 // 		  connectParticles: true
 // 		});
+
+$(".owl-carousel").owlCarousel();
 

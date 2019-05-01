@@ -3,6 +3,7 @@
 <table class="table table-bordered table-dark">
   <tr>
     <th scope="col">#</th>  
+	<th scope="col">Image</th>
     <th scope="col">Title</th>
     <th scope="col">Text</th>
     <th scope="col" colspan="2"></th>
@@ -11,6 +12,7 @@
   <% @articles.each do |article| %>
     <tr>
       <td><%= article.id %></td>
+	  <td><img src="<%= article.thumbnail_url %>" class="img-fluid" /></td>
       <td><%= article.title %></td>
       <td><%= article.text %></td>
       <td><%= link_to 'Show', article_path(article) %></td>
