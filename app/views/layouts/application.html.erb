@@ -33,6 +33,9 @@
 <style>
 
 </style>
+<!—- ShareThis BEGIN -—>
+<script async src="//platform-api.sharethis.com/js/sharethis.js#property=5cca53610ff462001290dd7f&product="sticky-share-buttons"></script>
+<!—- ShareThis END -—>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
@@ -71,12 +74,12 @@
   </div>
   
   <div class="row">
-    <div class="col-8">
-		<%= render "welcome/amazon_banner"%>
+    <div id="left-column" class="col-8 pull-left">
+		
       <%= yield %>
-	  
+	  <%= render "welcome/amazon_banner"%>
     </div>
-	<div class="col-auto">
+	<div id="right-column" class="col-4 pull-right">
 		
 		<%= render "welcome/twitter_feed"%>
 		<%= render "welcome/amazon_music"%>
@@ -115,6 +118,7 @@
           <ul class="list-unstyled text-small">
             <li><%= link_to "Team", welcome_team_path, class: "text-muted" %></li>
             <li><%= link_to "About", welcome_about_path, class: "text-muted" %></li>
+			<li><%= link_to "Support", welcome_support_path, class: "text-muted" %></li>
 			<li><%= link_to "Contact Us", welcome_contact_path, class: "text-muted" %></li>
             <li><%= link_to "Privacy", welcome_privacy_path, class: "text-muted" %></li>
             <li><%= link_to "Terms", welcome_terms_path, class: "text-muted" %></li>

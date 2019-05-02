@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'welcome/terms'
   get 'welcome/downloads'
   get 'welcome/deals'
+  get 'welcome/support'
 
   resources :articles do
     resources :comments

@@ -14,6 +14,9 @@ class WelcomeController < ApplicationController
   def about
   end
   
+  def support
+  end
+  
   def deals
     @deals = Deal.all
   end

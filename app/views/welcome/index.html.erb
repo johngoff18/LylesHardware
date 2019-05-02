@@ -1,19 +1,12 @@
-<!-- <div class="owl-carousel">
-<% @articles.each do |article|%>
-<div><img src="<%= article.thumbnail_url %>" class="img-fluid"/></div>
-<% end %>
-</div> -->
-
-
 <% @articles.each do |article| %>
 
 <div class="card mb-3">
   <div class="row no-gutters">
-<div class="col-auto d-none d-lg-block">
-      <img src="<%= article.thumbnail_url %>" class="img-fluid"/>
-          
-        
-    </div>
+	  <% if article.thumbnail_url != '' %>
+	  <div class="col-md-4 d-none d-lg-block">
+      	<img src="<%= article.thumbnail_url %>" class="img-fluid"/>
+      </div>
+	<% end %>
     <div class="col-md-8">
       <div class="card-body">
 <p class="card-text small text-success">Article</p>
