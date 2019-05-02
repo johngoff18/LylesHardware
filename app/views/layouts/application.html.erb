@@ -75,17 +75,17 @@
   </div>
   
   <div class="row">
-    <div id="left-column" class="col-8 pull-left">
-		
-      <%= yield %>
-	  <%= render "welcome/amazon_banner"%>
-    </div>
-	<div id="right-column" class="col-4 pull-right">
+      <div id="left-column" class="col-8 pull-left">
+  		 <%= render "welcome/amazon_banner"%>
+        <%= yield %>
+      </div>
+  	<div id="right-column" class="col-4 pull-right">
+  		
+  		<%= render "welcome/amazon_music"%>
 		<%= render "welcome/share"%>
-		<%= render "welcome/twitter_feed"%>
-		<%= render "welcome/amazon_music"%>
-		
-	</div>
+  	</div>
+   
+	
   </div>
 </div>
 <footer class="pt-4 my-md-5 pt-md-5 border-top container-fluid">

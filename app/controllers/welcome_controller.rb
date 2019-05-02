@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
   def index
-    @articles = Article.first(5)
+    @articles = Article.last(5)
     @deals = Deal.first(5)
   end
   def privacy

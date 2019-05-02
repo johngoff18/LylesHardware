@@ -2,11 +2,9 @@
 
 <div class="card mb-3">
   <div class="row no-gutters">
-	  <% if article.thumbnail_url != '' %>
 	  <div class="col-md-4 d-none d-lg-block">
-      	<img src="<%= article.thumbnail_url %>" class="img-fluid"/>
+      	<img src="<%= article.thumbnail_url %>" class="img-fluid" />
       </div>
-	<% end %>
     <div class="col-md-8">
       <div class="card-body">
 <p class="card-text small text-success">Article</p>
@@ -17,9 +15,8 @@
 				Last updated <%= article.updated_at.strftime('%b %e, %Y')%>
 			</small>
 		</p>
-      </div>
     </div>
-    
+</div>
     
   </div>
 </div>

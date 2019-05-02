@@ -1,6 +1,6 @@
 
 <h1>Gallery 
-	<%= link_to gallery_submit_path, class:"btn btn-success btn-sm" do %>
+	<%= link_to new_image_post_path, class:"btn btn-success btn-sm" do %>
 	<i class="fas fa-plus"></i>
 	<% end %>
 </h1>
@@ -15,7 +15,12 @@
       <p class="card-text"><%= image_post.caption %></p>
     </div>
   </div>
+  <div class="clearfix"></div>
 <% end %>
 
-
+<script>
+	$('#left-column').toggleClass('col-8').toggleClass('col-12')
+	$('#right-column').hide()
+	$('#amazon_music').hide()
+</script>
 

@@ -1,4 +1,6 @@
 class DownloadsController < ApplicationController
+  
+  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
   before_action :set_download, only: [:show, :edit, :update, :destroy]
 
   # GET /downloads
