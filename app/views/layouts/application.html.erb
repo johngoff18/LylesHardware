@@ -55,16 +55,21 @@
   <!-- Add your site or application content here -->
 <%= render "welcome/navbar" %>
   
-  <div class="container-fluid">
+  <div class="container">
   <div class="row">
 <div class="col-12">
-<p class="text-muted text-center"  style="margin:20px 0;"><small>Lyle's Hardware reviews products.  When you click our links to buy products we earn a percentage to fund <%= link_to "this site", root_path %>.</small></p>
+<p class="text-muted text-center"  style="margin:60px 0 20px 0;"><small>Lyle's Hardware reviews products.  When you click our links to buy products we earn a percentage to fund <%= link_to "this site", root_path %>.</small></p>
 <div>
+  </div>
+  <div class="row">
+	  <div class="col-12">
+	  <%= render "welcome/amazon_banner"%>
+  </div>
   </div>
   
   <div class="row">
       <div id="left-column" class="col-8 pull-left">
-  		 <%= render "welcome/amazon_banner"%>
+  		 
         <%= yield %>
       </div>
   	<div id="right-column" class="col-4 pull-right">

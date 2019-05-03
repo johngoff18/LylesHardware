@@ -23,5 +23,6 @@
 // 		  connectParticles: true
 // 		});
 
-$(".owl-carousel").owlCarousel();
+$(".container-fluid").toggleClass('container-fluid').toggleClass('container');
+
 

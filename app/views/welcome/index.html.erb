@@ -1,26 +1,22 @@
-<div class="row">
+<div class="card-columns">
 <% @articles.each do |article| %>
 
-<div class="card mb-3 col-12">
-  <div class="row no-gutters">
-	  <div class="col-md-4 d-none d-lg-block">
+<div class="card mb-3">
+  <div class="card-header small text-success">Article</div>
+  <div class="card-body">
+	
       	<img src="<%= article.thumbnail_url %>" class="img-fluid" />
-      </div>
-    <div class="col-md-8">
-      <div class="card-body">
-<p class="card-text small text-success">Article</p>
-        <h5 class="card-title"><%= link_to article.title, article %></h5>
-        <p class="card-text"><%= article.text.truncate_words(10) %></p>
-        <p class="card-text">
-			<small class="text-muted">
+     
+    <h5 class="card-title"><%= link_to article.title, article %></h5>
+    <p class="card-text"><%= article.text.truncate_words(10) %></p>
+  </div>
+  <div class="card-footer">
+	  <small class="text-muted">
 				Last updated <%= article.updated_at.strftime('%b %e, %Y')%>
 			</small>
-		</p>
-    </div>
+		</div>
 </div>
-    
-  </div>
-</div>
+
 
 <% end %>
 </div>
