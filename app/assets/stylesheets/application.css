@@ -15,7 +15,6 @@
  *= require owl.carousel
  *= require owl.theme
  */
-
 .background {
   position: absolute;
   top: 0;
@@ -27,6 +26,7 @@
 
 html {
 	background-color:#ecf0f1;
+	b
 }
 
 .center {
@@ -50,6 +50,11 @@ html {
 
 .image64{
 	max-width:64px;
+}
+
+.half {
+	width:50%;
+	height:50%;
 }
 
 /* CUSTOMIZE THE CAROUSEL

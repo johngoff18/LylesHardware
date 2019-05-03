@@ -12,6 +12,8 @@
 	  <meta property="og:type"          content="website" />
 	  <meta property="og:title"         content="Lyle's Hardware" />
 	  <meta property="og:description"   content="Website for everything computer hardware related" />
+	  
+	  <link rel="canonical" href="<%=request.original_url%>">
 
 <%= favicon_link_tag asset_path('icon.png') %>
     <%= csrf_meta_tags %>
@@ -85,7 +87,7 @@
       <div class="row">
         <div class="col-12 col-md">
 <%= link_to root_path do %>
-          <%= image_tag "lyleshardwarelogo.png" %>
+          <div class="hardware-brand">Lyle's <span class="hardware">HARDWARE</span></div>
 <% end %>
           <small class="d-block mb-3 text-muted">&copy; 2019</small>
         </div>
