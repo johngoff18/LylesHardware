@@ -1,16 +1,26 @@
-<% if notice %>
-<div class="alert alert-info" role="alert">
-  <p id="notice"><%= notice %></p>
-</div>
-<% end %>
-
-<h1>Cart</h1>
-
-<ul>
-	<% @cart.line_items.each do |item|%>
-	<li><%= item.product.title %></li>
+<div class="card mb-3">
+  <div class="card-header small">Your Cart</div>
+  <div class="card-body">
+	<% if notice %>
+	<div class="alert alert-info" role="alert">
+	  <p id="notice"><%= notice %></p>
+	</div>
 	<% end %>
-</ul>
-
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+    <p class="card-text">
+    	<table class="table table-bordered">
+			<% @cart.line_items.each do |line_item|%>
+				<td class="quantity"><%= line_item.quantity %></td>
+				<td><%= line_item.product.title %></td>
+				<td class="price"><%= sprintf("$%0.02f",line_item.total_price) %></td>
+			<% end %>
+			<tfoot>
+				<tr>
+					<th colspan="2">Total:</th>
+					<td class="price"><%= sprintf("$%0.02f",@cart.total_price) %></td>
+				</tr>
+			</tfoot>
+		</table>
+    </p>
+  </div>
+  <div class="card-footer"><%= button_to 'Empty Cart', @cart, method: :delete, data: {confirm: 'Are your sure?'}, class:"btn btn-outline-danger btn-small"%></div>
+</div>
