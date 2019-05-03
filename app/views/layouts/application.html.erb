@@ -6,7 +6,7 @@
 	  <!—- ShareThis END -—>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Lyle's Hardware - <%= controller.controller_name %></title>
+    <title>Lyle's Hardware - <%= @page_title %></title>
 	
 	<meta property="og:url"           content="<%= request.original_url %>" />
 	  <meta property="og:type"          content="website" />
@@ -75,6 +75,9 @@
         <%= yield %>
       </div>
   	<div id="right-column" class="col-4 pull-right">
+		<div id="cart">
+		<%= render_if @cart && @cart.line_items.any?, @cart %>
+	</div>
   		<%= render "welcome/email_subscription"%>
   		<%= render "welcome/amazon_music"%>
 		<%= render "welcome/share"%>

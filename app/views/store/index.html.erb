@@ -2,7 +2,7 @@
 
 
 
-<% if notice%>
+<% if notice %>
 <div class="alert alert-info" role="alert">
   <p id="notice"><%= notice %></p>
 </div>
@@ -22,12 +22,13 @@
      
     <h5 class="card-title"><%= product.title %></h5>
     <p class="card-text"><%= sanitize(product.description) %></p>
+  <p class="card-text small text-muted">
+			Price: <%= sprintf("$%0.02f",product.price) %>
+			
+		</p>
   </div>
   <div class="card-footer">
-	  <small class="text-muted">
-				Price: <%= sprintf("$%0.02f",product.price) %>
-				<%= button_to 'Add to Cart', line_items_path(product_id: product), class:"btn btn-outline-primary"%>
-			</small>
+	  <%= link_to 'View Product', product, class:"btn btn-info"%>
 		</div>
 </div>
 

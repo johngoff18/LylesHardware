@@ -1,0 +1,24 @@
+<% unless cart.line_items.empty? %>
+<div class="card mb-3">
+  <div class="card-header small text-muted">Your Cart</div>
+  <div class="card-body">
+	<% if notice %>
+	<div class="alert alert-info" role="alert">
+	  <p id="notice"><%= notice %></p>
+	</div>
+	<% end %>
+    <p class="card-text">
+    	<table class="table table-bordered">
+			<%= render(cart.line_items)%>
+			<tfoot>
+				<tr>
+					<th colspan="2">Total:</th>
+					<td class="price"><%= sprintf("$%0.02f",@cart.total_price) %></td>
+				</tr>
+			</tfoot>
+		</table>
+    </p>
+  </div>
+  <div class="card-footer"><%= button_to 'Empty Cart', @cart, method: :delete, data: {confirm: 'Are your sure?'}, class:"btn btn-outline-danger btn-small"%></div>
+</div>
+<% end %>
