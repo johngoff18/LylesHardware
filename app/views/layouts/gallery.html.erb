@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-	  <!—- ShareThis BEGIN -—>
-	  <script async src="//platform-api.sharethis.com/js/sharethis.js#property=5cca53610ff462001290dd7f&product="sticky-share-buttons"></script>
-	  <!—- ShareThis END -—>
+	  
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Lyle's Hardware</title>
@@ -44,6 +42,10 @@
     enable_page_level_ads: true
   });
 </script>
+  
+  <!—- ShareThis BEGIN -—>
+  <script async src="//platform-api.sharethis.com/js/sharethis.js#property=5cca53610ff462001290dd7f&product="sticky-share-buttons"></script>
+  <!—- ShareThis END -—>
   </head>
 
   <body>
@@ -52,9 +54,7 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <!-- Add your site or application content here -->
-<%= render "welcome/navbar" %>
-  
+  <%= render "welcome/navbar" %>
   <div class="container-fluid">
   <div class="row">
 <div class="col-12">
@@ -63,17 +63,10 @@
   </div>
   
   <div class="row">
-      <div id="left-column" class="col-8 pull-left">
+      <div id="left-column" class="col-auto">
   		 <%= render "welcome/amazon_banner"%>
         <%= yield %>
       </div>
-  	<div id="right-column" class="col-4 pull-right">
-  		<%= render "welcome/email_subscription"%>
-  		<%= render "welcome/amazon_music"%>
-		<%= render "welcome/share"%>
-  	</div>
-   
-	
   </div>
 </div>
 <footer class="pt-4 my-md-5 pt-md-5 border-top container-fluid small">

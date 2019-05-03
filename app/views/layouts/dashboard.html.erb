@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <!—- ShareThis BEGIN -—>
+	  <script async src="//platform-api.sharethis.com/js/sharethis.js#property=5cca53610ff462001290dd7f&product="sticky-share-buttons"></script>
+	  <!—- ShareThis END -—>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Lyle's Hardware</title>
+	
+	<meta property="og:url"           content="<%= request.original_url %>" />
+	  <meta property="og:type"          content="website" />
+	  <meta property="og:title"         content="Lyle's Hardware" />
+	  <meta property="og:description"   content="Website for everything computer hardware related" />
+
+<%= favicon_link_tag asset_path('icon.png') %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+<meta name="theme-color" content="#fafafa">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	
+	<script>(function(d, s, id) {
+	    var js, fjs = d.getElementsByTagName(s)[0];
+	    if (d.getElementById(id)) return;
+	    js = d.createElement(s); js.id = id;
+	    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+	    fjs.parentNode.insertBefore(js, fjs);
+	  }(document, 'script', 'facebook-jssdk'));</script>
+<style>
+
+</style>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8783854618839636",
+    enable_page_level_ads: true
+  });
+</script>
+  </head>
+  
+  <body>
+
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+	  
+	  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+	    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+	    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+	    <ul class="navbar-nav px-3">
+	      <li class="nav-item text-nowrap">
+	        <a class="nav-link" href="#">Sign out</a>
+	      </li>
+	    </ul>
+	  </nav>
+	  
+	  
+	  
+	  <div class="container-fluid">
+	    <div class="row">
+	      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+	        <div class="sidebar-sticky">
+	          <ul class="nav flex-column">
+	            <li class="nav-item">
+	              <a class="nav-link active" href="#">
+	                <span data-feather="home"></span>
+	                Dashboard <span class="sr-only">(current)</span>
+	              </a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="#">
+	                <span data-feather="file"></span>
+	                Orders
+	              </a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="#">
+	                <span data-feather="shopping-cart"></span>
+	                Products
+	              </a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="#">
+	                <span data-feather="users"></span>
+	                Customers
+	              </a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="#">
+	                <span data-feather="bar-chart-2"></span>
+	                Reports
+	              </a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="#">
+	                <span data-feather="layers"></span>
+	                Integrations
+	              </a>
+	            </li>
+	          </ul>
+
+	          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+	            <span>Saved reports</span>
+	            <a class="d-flex align-items-center text-muted" href="#">
+	              <span data-feather="plus-circle"></span>
+	            </a>
+	          </h6>
+	          <ul class="nav flex-column mb-2">
+	            <li class="nav-item">
+	              <a class="nav-link" href="#">
+	                <span data-feather="file-text"></span>
+	                Current month
+	              </a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="#">
+	                <span data-feather="file-text"></span>
+	                Last quarter
+	              </a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="#">
+	                <span data-feather="file-text"></span>
+	                Social engagement
+	              </a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="#">
+	                <span data-feather="file-text"></span>
+	                Year-end sale
+	              </a>
+	            </li>
+	          </ul>
+	        </div>
+	      </nav>
+
+	      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+	        <%= yield %>
+
+	       
+	      </main>
+	    </div>
+	  </div>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+	  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122671023-2"></script>
+	  <script>
+	    window.dataLayer = window.dataLayer || [];
+	    function gtag(){dataLayer.push(arguments);}
+	    gtag('js', new Date());
+
+	    gtag('config', 'UA-122671023-2');
+	  </script>
+
+
+	  
+	  	  <script id="dsq-count-scr" src="//lyle-goff.disqus.com/count.js" async></script>
+	    </body>
+	  </html>

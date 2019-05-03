@@ -15,9 +15,9 @@
     <% @deals.each do |deal| %>
       <tr>
 <td><%= deal.image_url.html_safe %></td>
-        <td><%= deal.name %></td>
-        <td>$<%= deal.sale_price %></td>
-        <td><%= link_to "Buy Now", deal.purchase_url, class:"btn btn-success" %></td>
+        <td class="small"><%= deal.name %></td>
+        <td  class="small">$<%= deal.sale_price %></td>
+        <td><%= link_to "Buy Now", deal.purchase_url, class:"btn btn-success btn-small" %></td>
       </tr>
     <% end %>
   </tbody>
