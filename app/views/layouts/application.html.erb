@@ -6,7 +6,7 @@
 	  <!—- ShareThis END -—>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Lyle's Hardware</title>
+    <title>Lyle's Hardware - <%= controller.controller_name %></title>
 	
 	<meta property="og:url"           content="<%= request.original_url %>" />
 	  <meta property="og:type"          content="website" />
@@ -105,8 +105,7 @@
           <h5>Resources</h5>
           <ul class="list-unstyled text-small">
             <li><%= link_to "Downloads", welcome_downloads_path, class: "text-muted" %></li>
-            <li><a class="text-muted" href="#">How To Videos</a></li>
-            <li><a class="text-muted" href="https://pcpartpicker.com">PC Parts Picker</a></li>
+       
           </ul>
         </div>
         <div class="col-6 col-md">

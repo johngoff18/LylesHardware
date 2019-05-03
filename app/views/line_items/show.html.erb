@@ -1,0 +1,16 @@
+<% if notice %>
+<div class="alert alert-info" role="alert">
+  <p id="notice"><%= notice %></p>
+</div>
+<% end %>
+<p>
+  <%= @line_item.product.title %> was successfully added to your cart.
+</p>
+
+<!--<p>
+  <strong>Cart:</strong>
+  <%= @line_item.cart %>
+</p>-->
+
+<%= link_to 'Edit', edit_line_item_path(@line_item) %> |
+<%= link_to 'Back', line_items_path %>
