@@ -17,8 +17,15 @@
 				</tr>
 			</tfoot>
 		</table>
+
+
     </p>
   </div>
-  <div class="card-footer"><%= button_to 'Empty Cart', @cart, method: :delete, data: {confirm: 'Are your sure?'}, class:"btn btn-outline-danger btn-small"%></div>
+	<div class="card-footer">
+		<div class="actions">
+	<%= button_to 'Empty Cart', @cart, method: :delete, data: {confirm: 'Are your sure?'}, class:"btn btn-outline-danger btn-small"%>
+<%= button_to 'Checkout', new_order_path, method: :get, class: "checkout btn btn-primary"%>
+</div>
+</div>
 </div>
 <% end %>
