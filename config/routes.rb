@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'subscribers/create'
   resources :orders
   resources :line_items
   resources :carts
@@ -26,6 +27,8 @@ Rails.application.routes.draw do
   resources :articles do
     resources :comments
   end
+  
+  resources :subscribers
 
   root 'welcome#index'
 end

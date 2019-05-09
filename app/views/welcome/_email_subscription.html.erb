@@ -9,11 +9,10 @@
     
     <p class="card-text small">
     	Subscribe to get the best content on the web, and great Amazon deals all picked just for you.
-	    <div class="form-group">
-	      
-	       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address">
-	       <button type="submit" class="btn btn-primary btn-block" style="margin-top:10px;">Subscribe <i class="fas fa-arrow-circle-right"></i></button>
-	     </div>
+		<%= form_for(@subscriber) do |f| %>
+		  <%= f.text_field :email %>
+		  <%= f.submit %>
+		<% end %>
 	     
 
     </p>

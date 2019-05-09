@@ -9,7 +9,10 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse float-right" id="navbarNav">
-	  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+	  <%= search_form_for @q ,:html => {class:'form-inline navbar-form navbar-left w-100'} do |f|  %>
+	  <%= f.search_field :text_cont, class:'form-control form-control-dark mr-sm-2 search-navbar  my-2 my-sm-0 col-9', placeholder: "Search" %>
+	  <%= f.submit 'Search'%>
+	  <% end %>
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
         <%= link_to "Reviews", root_path, class: "p-2 text-dark nav-link small" %>
@@ -19,10 +22,6 @@
       </li>
       <li class="nav-item text-nowrap">
         <%= link_to "Deals", welcome_deals_path, class: "p-2 text-dark nav-link small" %>
-      </li>
-      <li class="nav-item text-nowrap">
-		  <%= link_to "Store", store_index_path, class: "btn btn-outline-primary btn-sm small" %>
-        
       </li>
     </ul>
   </div>
